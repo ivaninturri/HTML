@@ -1,0 +1,14 @@
+ol{
+    list-style: none;
+    counter-reset: contador; /*counter-reset para reiniciar el contador*/
+}
+ol li{
+    counter-increment: contador; /*incrementa el contador*/
+}
+ol li::before{ /*::before es un selector (agregamos un texto antes de la lista*/
+    content:"Curso " counter(contador) ") "; /*la propiedad de content agregas algo antes que se muestre en la lista. counter(contador) es una variable*/
+    color: #ff6f00;
+}
+ol li::after{ /*::after Agrega despues del contenido */
+    content: ".";
+}
